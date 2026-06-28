@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+
+  <!-- 1. Corazón Blanco (Relleno blanco con borde sutil) -->
+  <g transform="translate(0, 0)">
+    <path
+      d="M50,82
+         C50,82 12,58 12,33
+         C12,18 23,10 35,10
+         C42,10 48,14 50,19
+         C52,14 58,10 65,10
+         C77,10 88,18 88,33
+         C88,58 50,82 50,82 Z"
+      fill="#FFFFFF"
+      stroke="#C85A3C"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- 2. Corazón Terracota (Relleno sólido) -->
+  <g transform="translate(110, 0)">
+    <path
+      d="M50,82
+         C50,82 12,58 12,33
+         C12,18 23,10 35,10
+         C42,10 48,14 50,19
+         C52,14 58,10 65,10
+         C77,10 88,18 88,33
+         C88,58 50,82 50,82 Z"
+      fill="#C85A3C"
+      stroke="none"
+    />
+  </g>
+
+  <!-- 3. Corazón Outline (Solo contorno) -->
+  <g transform="translate(220, 0)">
+    <path
+      d="M50,82
+         C50,82 12,58 12,33
+         C12,18 23,10 35,10
+         C42,10 48,14 50,19
+         C52,14 58,10 65,10
+         C77,10 88,18 88,33
+         C88,58 50,82 50,82 Z"
+      fill="none"
+      stroke="#C85A3C"
+      stroke-width="1.6"
+      stroke-linejoin="round"
+    />
+  </g>
+
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- 4. MINIMALISTA (LÍNEA CONTINUA) -->
+  <!-- Path drawn as a single continuous open stroke, no fill -->
+  <path
+    d="M50,78
+       C50,78 48,76 40,68
+       C28,56 15,46 15,33
+       C15,20 24,13 35,13
+       C42,13 47,17 50,22
+       C53,17 58,13 65,13
+       C76,13 85,20 85,33
+       C85,46 72,56 60,68
+       C52,76 50,78 50,78"
+    fill="none"
+    stroke="#C85A3C"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
