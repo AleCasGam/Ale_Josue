@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,4 +13,34 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  /* Tipografías */
+  --font-great: "Great Vibes", cursive;
+  --font-tangerine: "Tangerine", cursive;
+  --font-cormorant: "Cormorant Upright", serif;
+  --font-serif: "Libre Baskerville", serif;
+  --font-ui: "Montserrat", sans-serif;
+}
+
+@theme {
+  /* colores */
+  --color-primary: #8A2F0A;
+  --color-primary-dark: #6E2A14;
+  --color-secondary: #4A2F24;
+  --color-muted: #735545;
+  --color-gold: #b96516;
+  --color-beige: #A88768;
+  --color-background: #FFF7F0;
+  /* #8C5A3C */
+}
+
+.seccion {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

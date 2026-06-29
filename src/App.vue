@@ -6,8 +6,9 @@
 </template>
 
 <script>
+
 import ClosedInvitation from './components/ClosedInvitation.vue'
-import Invitation from './components/Invitation.vue'
+import Invitation from './components/Invitation/index.vue'
 export default {
   name: 'App',
   components: {
@@ -16,7 +17,7 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
     }
   },
 }
@@ -24,7 +25,8 @@ export default {
 
 <style scoped>
 .general-background {
-  background-image: url('./assets/images/fondoPastel.png');
+  background-image: url('./assets/images/fondo-claro.png');
+  /* background-color: rgb(255, 255, 255); */
   background-size: cover;
   background-position: center;
 }
