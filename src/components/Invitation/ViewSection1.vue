@@ -1,6 +1,6 @@
 <template>
-    <section class="gap-18">
-        <span class="font-serif font-bold text-2xl tracking-[0.2em] text-muted">
+    <section class="gap-10">
+        <span class="font-serif font-bold text-xl tracking-[0.2em] text-muted">
             NUESTRA BODA
         </span>
         <div
@@ -11,12 +11,12 @@
         </div>
         <!-- font-cormorant -->
 
-        <span class="font-serif font-bold text-2xl tracking-[0.2em] text-muted uppercase">
+        <span class="font-serif font-bold text-xl tracking-[0.2em] text-muted uppercase">
             {{ data.date || 'Fecha de la boda' }}
         </span>
 
 
-        <Countdown class="py-2 text-gold" />
+        <Countdown class="mt-12 py-2 text-gold" />
     </section>
 </template>
 

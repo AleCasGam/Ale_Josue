@@ -2,14 +2,24 @@
   <div class="invitacion-scroll">
 
     <!-- ── Sección 1: Portada ── -->
-    <section class="seccion">
+    <section class="seccion items-center justify-center">
       <img class="sobre-flores-entrada pl-4 pr-[0.9rem]" src="../../assets/images/sobre-abierto-sombra.png" alt="Sobre Abierto" />
     </section>
 
-    <!-- ── Sección 2 ── -->
-    <ViewSection1 class="seccion" />
+    <!-- Seccion 2: Informacion y contador -->
+    <ViewSection1 class="seccion items-center justify-center" />
+    <!-- Seccion 2: Invitacion y foto -->
     <ViewSection2 class="seccion" />
-    <!-- ViewSection2 -->
+    <!-- Seccion 4: Donde y cuando, ceremonia -->
+    <ViewSection3 class="seccion" />
+    <!-- Seccion 4: Donde y cuando, recepción -->
+    <ViewSection4 class="seccion" />
+    <!-- Seccion 5: Itinerario -->
+    <ViewSection5 class="seccion items-center justify-center" />
+    <!-- Seccion 6: Galeria de fotos -->
+    <ViewSection6 class="seccion items-center justify-center" />
+    <!-- seccion 7: Codigo de vestimenta -->
+    <ViewSection7 class="seccion items-center justify-center" />
 
     <!-- ── Sección 3 ── -->
     <section class="seccion">
@@ -40,13 +50,24 @@
 <script>
 import ViewSection1 from './ViewSection1.vue'
 import ViewSection2 from './ViewSection2.vue'
+import ViewSection3 from './ViewSection3.vue'
+import ViewSection4 from './ViewSection4.vue'
+import ViewSection5 from './ViewSection5.vue'
+import ViewSection6 from './ViewSection6.vue'
+import ViewSection7 from './ViewSection7.vue'
 import TextBox from '../ui/TextBox.vue'
+
 export default {
   name: 'Invitation',
   components: {
     TextBox,
     ViewSection1,
     ViewSection2,
+    ViewSection3,
+    ViewSection4,
+    ViewSection5,
+    ViewSection6,
+    ViewSection7,
   },
   data() {
     return {
