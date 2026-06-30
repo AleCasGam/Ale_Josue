@@ -2,7 +2,7 @@
   <section class="p-4 py-16 gap-10">
     <h1 class="font-cormorant text-primary text-4xl font-bold text-center">¿Dónde y Cuándo?</h1>
     <div class="w-full h-[75vh] p-4 gap-4 border border-primary grid grid-rows-2">
-        <div class="w-full bg-cover bg-center bg-no-repeat" style="background-image: url('/src/assets/images/pictures/casa-florencia.png')">
+        <div class="w-full image-backgrond1">
 
         </div>
         <div class="w-full p-4 flex flex-col gap-2 text-center items-center">
@@ -46,4 +46,10 @@ export default {
 </script>
 
 <style scoped>
+.image-backgrond1 {
+  background-image: url('../../assets/images/pictures/casa-florencia.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 </style>

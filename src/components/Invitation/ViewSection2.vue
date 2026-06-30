@@ -1,6 +1,6 @@
 <template>
-  <section class="p-4 gap-10">
-    <div class="w-full h-[50vh] bg-transparent border border-primary">
+  <section class="p-4 py-8 gap-10">
+    <div class="w-full h-[45vh] bg-transparent border border-primary">
       <img class="p-4 w-full h-full object-cover" src="../../assets/images/pictures/pre-boda-1.png" alt="Pre Boda 1" />
     </div>
 

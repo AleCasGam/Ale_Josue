@@ -9,7 +9,7 @@
     <!-- Seccion 2: Informacion y contador -->
     <ViewSection1 class="seccion items-center justify-center" />
     <!-- Seccion 2: Invitacion y foto -->
-    <ViewSection2 class="seccion" />
+    <ViewSection2 class="seccion items-center justify-center" />
     <!-- Seccion 4: Donde y cuando, ceremonia -->
     <ViewSection3 class="seccion" />
     <!-- Seccion 4: Donde y cuando, recepción -->

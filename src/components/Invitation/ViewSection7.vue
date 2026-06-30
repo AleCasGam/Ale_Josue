@@ -1,8 +1,8 @@
 <template>
-  <section class="p-4 relative">
-    <img class="absolute top-0 left-0 w-full h-full object-cover" src="../../assets/images/marco-flores.png" alt="">
-    <div class="w-full h-full bg-transparent p-6">
-      <img class="w-full h-full object-cover" src="../../assets/images/codigo-vestimenta.png" alt="Itinerario" />
+  <section class="flex flex-col p-4 py-20 gap-10">
+    <h1 class="font-cormorant text-primary text-4xl font-bold text-center">Código de Vestimenta</h1>
+    <div class="w-full h-full">
+      <img class="w-full h-full object-cover border-2 border-primary" src="../../assets/images/codigo-vestimenta-3.png" alt="Código de Vestimenta" />
     </div>
   </section>
 </template>
