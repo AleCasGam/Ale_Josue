@@ -1,5 +1,5 @@
 <template>
-  <section class="p-4 py-16 gap-10">
+  <section class="p-4 gap-10">
     <h1 class="font-cormorant text-primary text-4xl font-bold text-center">¿Dónde y Cuándo?</h1>
     <div class="w-full h-[75vh] p-4 gap-4 border border-primary grid grid-rows-2">
         <div class="w-full image-backgrond1">
@@ -7,7 +7,7 @@
         </div>
         <div class="w-full p-4 flex flex-col gap-2 text-center items-center">
             <h2 class="text-primary text-2xl font-bold uppercase font-cormorant self-center">Ceremonia</h2>
-            <span class="font-serif text-secondary text-md">Sábado 08 de Octubre de 2026</span>
+            <span class="font-serif text-secondary text-md">Sábado 03 de Octubre de 2026</span>
             <span class="font-serif text-secondary text-xl font-semibold">Santuario del Señor del Encino</span>
             <span class="self-start font-serif text-secondary text-md flex items-center justify-center gap-2">
                 <MapPinIcon class="w-5 h-5 solid" />
@@ -18,7 +18,7 @@
                 4:00 PM
             </span>
 
-            <a href="https://maps.app.goo.gl/Rf7988ZuGQekkEuA6" target="_blank" rel="noopener noreferrer" class="border-2 border-primary-dark bg-background shadow-md w-fit p-3 mt-2 text-xl font-bold text-gold uppercase">Ver en el mapa</a>
+            <a href="https://maps.app.goo.gl/Rf7988ZuGQekkEuA6" target="_blank" rel="noopener noreferrer" class="border-2 border-primary-dark bg-background shadow-md w-fit p-3 my-2 text-xl font-bold text-gold uppercase">Ver en el mapa</a>
         </div>
 
     </div>

@@ -7,19 +7,19 @@
     </section>
 
     <!-- Seccion 2: Informacion y contador -->
-    <ViewSection1 class="seccion items-center justify-center" />
+    <ViewSection1 class="seccion" />
     <!-- Seccion 2: Invitacion y foto -->
-    <ViewSection2 class="seccion items-center justify-center" />
+    <ViewSection2 class="seccion" />
     <!-- Seccion 4: Donde y cuando, ceremonia -->
     <ViewSection3 class="seccion" />
     <!-- Seccion 4: Donde y cuando, recepción -->
     <ViewSection4 class="seccion" />
     <!-- Seccion 5: Itinerario -->
-    <ViewSection5 class="seccion items-center justify-center" />
+    <ViewSection5 class="seccion" />
     <!-- Seccion 6: Galeria de fotos -->
-    <ViewSection6 class="seccion items-center justify-center" />
+    <ViewSection6 class="seccion" />
     <!-- seccion 7: Codigo de vestimenta -->
-    <ViewSection7 class="seccion items-center justify-center" />
+    <ViewSection7 class="seccion" />
 
     <!-- ── Sección 3 ── -->
     <section class="seccion">

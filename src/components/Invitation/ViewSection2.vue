@@ -1,16 +1,19 @@
 <template>
-  <section class="p-4 py-8 gap-10">
-    <div class="w-full h-[45vh] bg-transparent border border-primary">
+  <section class="px-4 gap-4">
+    <div class="w-full h-[40vh] bg-transparent border border-primary">
       <img class="p-4 w-full h-full object-cover" src="../../assets/images/pictures/pre-boda-1.png" alt="Pre Boda 1" />
     </div>
+    <div class="w-full h-[40vh] bg-transparent border border-primary">
+      <img class="w-full h-full object-cover" src="../../assets/images/nos-casamos.png" alt="Pre Boda 1" />
+    </div>
 
-    <div class="flex flex-col text-center gap-4">
+    <!-- <div class="flex flex-col text-center gap-4">
       <h1 class="text-primary text-4xl font-bold font-cormorant">¡Nos casamos!</h1>
       <span class="font-serif text-secondary text-xl">
         <p>Con el corazón lleno de alegría tenemos el honor de invitarte a celebrar el día en que uniremos nuestras vidas en matrimonio.</p>
         <p>Tu compañía será el mejor regalo para hacer de este momento un recuerdo inolvidable.</p>
       </span>
-    </div>
+    </div> -->
   </section>
 </template>
 

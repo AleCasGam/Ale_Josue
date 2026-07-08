@@ -1,7 +1,7 @@
 <template>
   <div class="general-background w-screen" :class="{ 'flex flex-col items-center justify-center overflow-hidden h-screen': !isOpen }">
     <ClosedInvitation v-if="!isOpen" @open="isOpen = true" />
-    <Invitation v-else />
+    <Invitation v-else class="max-h-[90%]" />
   </div>
 </template>
 
