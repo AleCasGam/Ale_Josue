@@ -1,6 +1,9 @@
 <template>
   <div class="invitacion-scroll">
 
+    <!-- Botón de música, flotante sobre todas las secciones -->
+    <MusicPlayer />
+
     <!-- ── Sección 1: Portada ── -->
     <section class="seccion items-center justify-center">
       <img class="sobre-flores-entrada pl-4 pr-[0.9rem]" src="../../assets/images/sobre-abierto-sombra.webp" alt="Sobre Abierto" />
@@ -56,11 +59,13 @@ import ViewSection5 from './ViewSection5.vue'
 import ViewSection6 from './ViewSection6.vue'
 import ViewSection7 from './ViewSection7.vue'
 import TextBox from '../ui/TextBox.vue'
+import MusicPlayer from '../MusicPlayer.vue'
 
 export default {
   name: 'Invitation',
   components: {
     TextBox,
+    MusicPlayer,
     ViewSection1,
     ViewSection2,
     ViewSection3,

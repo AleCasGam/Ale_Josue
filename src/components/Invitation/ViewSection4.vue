@@ -1,7 +1,11 @@
 <template>
   <section class="p-4 gap-10">
     <h1 class="font-cormorant text-primary text-4xl font-bold text-center">¿Dónde y Cuándo?</h1>
-    <div class="w-full h-[75vh] p-4 gap-4 border border-primary grid grid-rows-2">
+    <div class="relative w-full h-[75vh] p-4 gap-4 border border-primary grid grid-rows-2 rounded-md">
+        <!-- corazón montado sobre la línea del marco: el fondo crema la corta -->
+        <span class="absolute top-0 left-1/2 flex -translate-x-1/2 -translate-y-1/2 bg-background px-2">
+            <HeartIcon class="w-4 h-4 text-primary" />
+        </span>
         <div class="w-full image-backgrond1">
 
         </div>
@@ -18,7 +22,7 @@
                 6:00 PM
             </span>
 
-            <a href="https://maps.app.goo.gl/EXmPsjM5tFCP4RYaA" target="_blank" rel="noopener noreferrer" class="border-2 border-primary-dark bg-background shadow-md w-fit p-3 my-2 text-xl font-bold text-gold uppercase">Ver en el mapa</a>
+            <BotonMapa href="https://maps.app.goo.gl/EXmPsjM5tFCP4RYaA" />
         </div>
 
     </div>
@@ -27,15 +31,18 @@
 
 <script>
 import TextBox from '../ui/TextBox.vue'
-import { MapPinIcon } from '@heroicons/vue/24/solid'
+import BotonMapa from '../ui/BotonMapa.vue'
+import { MapPinIcon, HeartIcon } from '@heroicons/vue/24/solid'
 import {  ClockIcon } from '@heroicons/vue/24/outline'
 import weddingData from '../../data/wedding-data.js'
 export default {
   name: 'ViewSection4',
   components: {
     TextBox,
+    BotonMapa,
     MapPinIcon,
-    ClockIcon
+    ClockIcon,
+    HeartIcon
   },
   data() {
     return {

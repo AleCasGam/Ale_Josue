@@ -15,7 +15,7 @@ import santuarioEncino from './images/pictures/santuario-encino.webp'
 import casaFlorencia from './images/pictures/casa-florencia.webp'
 import itinerario from './images/itinerario.webp'
 import select2 from './images/pictures/select-2.webp'
-import select4 from './images/pictures/select-4.webp'
+import select3 from './images/pictures/select-3.webp'
 import selectMano from './images/pictures/select-mano.webp'
 import codigoVestimenta from './images/codigo-vestimenta-3.webp'
 
@@ -28,7 +28,7 @@ export default [
   casaFlorencia, // sección 4, recepción
   itinerario, // sección 5
   select2, // sección 6, galería
-  select4, // sección 6, galería
+  select3, // sección 6, galería
   selectMano, // sección 6, galería
   codigoVestimenta, // sección 7
 ]
