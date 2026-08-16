@@ -4,8 +4,9 @@
       <!-- Sobre cerrado: se anima al hacer clic -->
       <img
         class="sobre-img sobre-cerrado"
-        src="../assets/images/sobre-cerrado.png"
+        src="../assets/images/sobre-cerrado.webp"
         alt="Sobre Cerrado"
+        fetchpriority="high"
       />
     </div>
     <p class="hint-text">Toca para abrir</p>

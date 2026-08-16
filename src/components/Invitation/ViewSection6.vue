@@ -23,12 +23,12 @@ export default {
 <style scoped>
 
 .image-1 {
-  background-image: url('../../assets/images/pictures/pre-boda-3.png');
+  background-image: url('../../assets/images/pictures/select-2.webp');
 }
 .image-2 {
-  background-image: url('../../assets/images/pictures/pre-boda-mano.png');
+  background-image: url('../../assets/images/pictures/select-4.webp');
 }
 .image-3 {
-  background-image: url('../../assets/images/pictures/pre-boda-4.png');
+  background-image: url('../../assets/images/pictures/select-mano.webp');
 }
 </style>

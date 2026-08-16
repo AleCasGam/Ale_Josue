@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .image-backgrond1 {
-  background-image: url('../../assets/images/pictures/casa-florencia.png');
+  background-image: url('../../assets/images/pictures/casa-florencia.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

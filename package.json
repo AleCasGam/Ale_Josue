@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run optimizar-imagenes",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.4",
+    "sharp": "^0.35.3",
     "vite": "^5.4.10"
   }
 }

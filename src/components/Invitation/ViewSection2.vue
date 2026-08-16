@@ -1,10 +1,10 @@
 <template>
   <section class="px-4 gap-4">
     <div class="w-full h-[40vh] bg-transparent border border-primary">
-      <img class="p-4 w-full h-full object-cover" src="../../assets/images/pictures/pre-boda-1.png" alt="Pre Boda 1" />
+      <img class="p-4 w-full h-full object-top object-cover" src="../../assets/images/pictures/select-1.webp" alt="Pre Boda 1" />
     </div>
     <div class="w-full h-[40vh] bg-transparent border border-primary">
-      <img class="w-full h-full object-cover" src="../../assets/images/nos-casamos.png" alt="Pre Boda 1" />
+      <img class="w-full h-full object-cover" src="../../assets/images/nos-casamos.webp" alt="Pre Boda 1" />
     </div>
 
     <!-- <div class="flex flex-col text-center gap-4">

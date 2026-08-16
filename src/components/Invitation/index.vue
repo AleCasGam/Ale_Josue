@@ -3,7 +3,7 @@
 
     <!-- ── Sección 1: Portada ── -->
     <section class="seccion items-center justify-center">
-      <img class="sobre-flores-entrada pl-4 pr-[0.9rem]" src="../../assets/images/sobre-abierto-sombra.png" alt="Sobre Abierto" />
+      <img class="sobre-flores-entrada pl-4 pr-[0.9rem]" src="../../assets/images/sobre-abierto-sombra.webp" alt="Sobre Abierto" />
     </section>
 
     <!-- Seccion 2: Informacion y contador -->
