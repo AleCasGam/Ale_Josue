@@ -10,7 +10,6 @@
 
 import sobreAbierto from './images/sobre-abierto-sombra.webp'
 import select1 from './images/pictures/select-1.webp'
-import nosCasamos from './images/nos-casamos.webp'
 import santuarioEncino from './images/pictures/santuario-encino.webp'
 import casaFlorencia from './images/pictures/casa-florencia.webp'
 import itinerario from './images/itinerario.webp'
@@ -23,7 +22,6 @@ import codigoVestimenta from './images/codigo-vestimenta-3.webp'
 export default [
   sobreAbierto, // portada
   select1, // sección 2, foto
-  nosCasamos, // sección 2, foto
   santuarioEncino, // sección 3, ceremonia
   casaFlorencia, // sección 4, recepción
   itinerario, // sección 5

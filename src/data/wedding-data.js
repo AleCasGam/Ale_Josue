@@ -17,8 +17,8 @@ export default {
   },
 
   messages: {
-    texto1: "Nos llena de alegria compartir nuestra boda con ustedes! Los invitamos a celebrar juntos el día más especial de nuestras vidas.",
-    texto2: "Acompáñanos a celebrar nuestro amor",
+    texto1: "Con el corazón lleno de alegría tenemos el honor de invitarte a celebrar el día en que uniremos nuestras vidas en matrimonio.",
+    texto2: "Tu compañía será el mejor regalo para hacer de este momento un recuerdo inolvidable.",
     texto3: "El día de nuestra boda",
     texto4: "¡Te esperamos!"
   },
