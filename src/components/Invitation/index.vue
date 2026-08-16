@@ -23,29 +23,9 @@
     <ViewSection6 class="seccion" />
     <!-- seccion 7: Codigo de vestimenta -->
     <ViewSection7 class="seccion" />
-
-    <!-- ── Sección 3 ── -->
-    <section class="seccion">
-      <!-- colors -->
-      <h2 class="text-black font-bold text-2xl my-2">-- Colors --</h2>
-      <span class="text-primary text-2xl">primary: texto aqui</span>
-      <span class="text-primary-dark text-2xl">primary-dark: texto aqui</span>
-      <span class="text-secondary text-2xl">secondary: texto aqui</span>
-      <span class="text-muted text-2xl">muted: texto aqui</span>
-      <span class="text-gold text-2xl">gold: texto aqui</span>
-      <span class="text-beige text-2xl">beige: texto aqui</span>
-      <span class="text-background text-2xl">background: texto aqui</span>
-      <!-- text box -->
-      <h2 class="text-black font-bold text-2xl my-2">-- Text box --</h2>
-      <TextBox type="primary" >
-        <h1 class="font-great text-2xl">
-          Primary
-        </h1>
-      </TextBox>
-      <TextBox type="secondary" text="Secondary" class="font-tangerine font-bold text-2xl" />
-      <TextBox type="dark" text="Dark" class="text-2xl" />
-      <TextBox text="Default" class="text-2xl" />
-    </section>
+    <!-- seccion 7: Mesa de regalos -->
+    <ViewSection8 class="seccion" />
+    <ViewSection9 class="seccion" />
 
   </div>
 </template>
@@ -58,6 +38,8 @@ import ViewSection4 from './ViewSection4.vue'
 import ViewSection5 from './ViewSection5.vue'
 import ViewSection6 from './ViewSection6.vue'
 import ViewSection7 from './ViewSection7.vue'
+import ViewSection8 from './ViewSection8.vue'
+import ViewSection9 from './ViewSection9.vue'
 import TextBox from '../ui/TextBox.vue'
 import MusicPlayer from '../MusicPlayer.vue'
 
@@ -73,6 +55,8 @@ export default {
     ViewSection5,
     ViewSection6,
     ViewSection7,
+    ViewSection8,
+    ViewSection9,
   },
   data() {
     return {

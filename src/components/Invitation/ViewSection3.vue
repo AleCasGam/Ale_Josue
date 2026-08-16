@@ -23,7 +23,11 @@
             </span>
 
 
-            <BotonMapa href="https://maps.app.goo.gl/Rf7988ZuGQekkEuA6" />
+            <BotonEnlace
+              href="https://maps.app.goo.gl/Rf7988ZuGQekkEuA6"
+              texto="Ver en el mapa"
+              :icono="MapPinIcon"
+            />
         </div>
 
     </div>
@@ -32,7 +36,7 @@
 
 <script>
 import TextBox from '../ui/TextBox.vue'
-import BotonMapa from '../ui/BotonMapa.vue'
+import BotonEnlace from '../ui/BotonEnlace.vue'
 import { MapPinIcon, HeartIcon } from '@heroicons/vue/24/solid'
 import {  ClockIcon } from '@heroicons/vue/24/outline'
 import weddingData from '../../data/wedding-data.js'
@@ -40,7 +44,7 @@ export default {
   name: 'ViewSection3',
   components: {
     TextBox,
-    BotonMapa,
+    BotonEnlace,
     MapPinIcon,
     ClockIcon,
     HeartIcon
@@ -48,6 +52,7 @@ export default {
   data() {
     return {
       data: weddingData,
+      MapPinIcon, // se pasa como prop al BotonEnlace
     };
   }
 };

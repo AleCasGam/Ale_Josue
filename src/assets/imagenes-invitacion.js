@@ -17,6 +17,10 @@ import select2 from './images/pictures/select-2.webp'
 import select3 from './images/pictures/select-3.webp'
 import selectMano from './images/pictures/select-mano.webp'
 import codigoVestimenta from './images/codigo-vestimenta-3.webp'
+import select11 from './images/pictures/select-11.webp'
+import select12 from './images/pictures/select-12.webp'
+import select21 from './images/pictures/select-21.webp'
+import select22 from './images/pictures/select-22.webp'
 
 // En orden de aparición: lo de arriba es lo que se ve primero al abrir.
 export default [
@@ -29,4 +33,8 @@ export default [
   select3, // sección 6, galería
   selectMano, // sección 6, galería
   codigoVestimenta, // sección 7
+  select11, // sección 8, mesa de regalos
+  select12, // sección 8, mesa de regalos
+  select21, // sección 9, agradecimiento
+  select22, // sección 9, agradecimiento
 ]

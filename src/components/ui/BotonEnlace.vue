@@ -1,8 +1,8 @@
 <template>
   <!--
     Botón de doble marco: el <a> pinta el fondo terracota y el <span> interior
-    lleva la línea blanca separada del borde. Se usa en la ceremonia y en la
-    recepción, cambiando solo el enlace.
+    lleva la línea blanca separada del borde. Se usa para la ceremonia, la
+    recepción y la mesa de regalos; solo cambian el icono, el texto y el enlace.
   -->
   <a
     :href="href"
@@ -12,7 +12,7 @@
            transition-transform duration-200 active:scale-95 hover:scale-[1.03]"
   >
     <span class="flex items-center justify-center gap-3 rounded border border-white/80 px-5 py-2.5">
-      <MapPinIcon class="w-5 h-5 text-white shrink-0" />
+      <component :is="icono" class="w-5 h-5 text-white shrink-0" />
       <span class="font-serif font-bold uppercase tracking-widest text-white text-sm">
         {{ texto }}
       </span>
@@ -21,13 +21,8 @@
 </template>
 
 <script>
-import { MapPinIcon } from '@heroicons/vue/24/solid'
-
 export default {
-  name: 'BotonMapa',
-  components: {
-    MapPinIcon,
-  },
+  name: 'BotonEnlace',
   props: {
     href: {
       type: String,
@@ -35,7 +30,12 @@ export default {
     },
     texto: {
       type: String,
-      default: 'Ver en el mapa',
+      required: true,
+    },
+    // el componente del icono, ya importado por la vista que usa el botón
+    icono: {
+      type: [Object, Function],
+      required: true,
     },
   },
 }
