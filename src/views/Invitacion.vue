@@ -1,7 +1,12 @@
 <template>
-  <div :class="{ 'flex flex-col items-center justify-center overflow-hidden h-screen': !isOpen }">
+  <div :class="{ 'flex flex-col items-center justify-center overflow-hidden h-dvh': !isOpen }">
     <ClosedInvitation v-if="!isOpen" @open="isOpen = true" />
-    <Invitation v-else class="max-h-[90%]" />
+    <!--
+      Sin max-height: el contenedor de scroll mide exactamente lo mismo que sus
+      secciones. Cualquier tope aquí desalinea el scroll-snap y va acumulando
+      desfase sección tras sección.
+    -->
+    <Invitation v-else />
   </div>
 </template>
 

@@ -68,11 +68,16 @@ export default {
 <style scoped>
 /* ── Contenedor principal con scroll-snap ── */
 .invitacion-scroll {
+  /* mismo criterio que .seccion: el contenedor y sus secciones tienen que
+     medir exactamente igual o el snap queda corrido */
   height: 100vh;
+  height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
   /* scroll suave en iOS */
+  /* evita que el tirón al final arrastre la página y desalinee el snap */
+  overscroll-behavior-y: contain;
 }
 
 /* ── Cada sección = 1 pantalla de celular ── */

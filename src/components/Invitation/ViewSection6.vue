@@ -42,9 +42,9 @@ export default {
   background-image: url('../../assets/images/pictures/select-2.webp');
 }
 .image-2 {
-  background-image: url('../../assets/images/pictures/select-3.webp');
+  background-image: url('../../assets/images/pictures/select-mano.webp');
 }
 .image-3 {
-  background-image: url('../../assets/images/pictures/select-mano.webp');
+  background-image: url('../../assets/images/pictures/select-3.webp');
 }
 </style>

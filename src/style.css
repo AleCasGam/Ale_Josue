@@ -5,9 +5,14 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /*
+    El diseño es claro y fijo: sin esto, Android Chrome puede aplicar su modo
+    oscuro automático e invertir los colores de la invitación. El fondo oscuro
+    del boilerplate de Vite también se asomaba como franja al final del scroll.
+  */
+  color-scheme: light;
+  color: var(--color-secondary);
+  background-color: var(--color-background);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,12 +42,21 @@
 }
 
 .seccion {
+  /*
+    dvh en vez de vh: en Android, 100vh es la altura del viewport SIN la barra
+    de direcciones, así que mientras la barra está visible la sección mide más
+    que la pantalla y se pierde la parte de abajo. dvh sigue el alto real.
+    La línea vh queda como respaldo para navegadores que no lo soporten.
+  */
   min-height: 100vh;
+  min-height: 100dvh;
   scroll-snap-align: start;
+  /* que un deslizón fuerte no se salte una sección entera */
+  scroll-snap-stop: always;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
 }

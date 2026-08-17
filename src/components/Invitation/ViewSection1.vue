@@ -4,7 +4,7 @@
             NUESTRA BODA
         </span>
         <div
-            class="flex flex-col gap-1 font-cormorant font-semibold text-[5rem] leading-none text-primary items-center">
+            class="flex flex-col gap-1 font-cormorant font-semibold text-[4rem] leading-none text-primary items-center">
             <span>{{ data.bride || 'Alejandra' }}</span>
             <span>&</span>
             <span>{{ data.groom || 'Josué' }}</span>
