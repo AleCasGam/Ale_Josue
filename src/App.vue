@@ -1,40 +1,24 @@
 <template>
-  <div class="general-background w-screen" :class="{ 'flex flex-col items-center justify-center overflow-hidden h-screen': !isOpen }">
-    <ClosedInvitation v-if="!isOpen" @open="isOpen = true" />
-    <Invitation v-else class="max-h-[90%]" />
+  <div class="general-background w-screen min-h-screen">
+    <!--
+      keep-alive conserva la invitación al ir y volver de hospedaje: el sobre
+      no se vuelve a cerrar y la música sigue sonando.
+    -->
+    <RouterView v-slot="{ Component }">
+      <KeepAlive>
+        <component :is="Component" />
+      </KeepAlive>
+    </RouterView>
   </div>
 </template>
 
 <script>
+import { RouterView } from 'vue-router'
 
-import ClosedInvitation from './components/ClosedInvitation.vue'
-import Invitation from './components/Invitation/index.vue'
-import imagenesInvitacion from './assets/imagenes-invitacion.js'
 export default {
   name: 'App',
   components: {
-    ClosedInvitation,
-    Invitation
-  },
-  data() {
-    return {
-      isOpen: false,
-    }
-  },
-  mounted() {
-    // Mientras el invitado ve el sobre cerrado aprovechamos para ir bajando las
-    // imágenes de adentro. Así la invitación abre sin huecos aunque la señal
-    // esté floja, que es el caso común en Ocotes de Moya.
-    this.precargarImagenes()
-  },
-  methods: {
-    precargarImagenes() {
-      for (const url of imagenesInvitacion) {
-        const img = new Image()
-        img.decoding = 'async' // que no bloquee el hilo principal
-        img.src = url
-      }
-    }
+    RouterView,
   },
 }
 </script>
@@ -42,9 +26,7 @@ export default {
 <style scoped>
 .general-background {
   background-image: url('./assets/images/fondo-claro.webp');
-  /* background-color: rgb(255, 255, 255); */
   background-size: cover;
   background-position: center;
 }
-
 </style>

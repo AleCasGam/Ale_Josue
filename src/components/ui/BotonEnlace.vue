@@ -2,12 +2,14 @@
   <!--
     Botón de doble marco: el <a> pinta el fondo terracota y el <span> interior
     lleva la línea blanca separada del borde. Se usa para la ceremonia, la
-    recepción y la mesa de regalos; solo cambian el icono, el texto y el enlace.
+    recepción y el hospedaje; solo cambian el icono, el texto y el destino.
+
+    Con `to` navega dentro del sitio (RouterLink); con `href` abre un enlace
+    externo en otra pestaña.
   -->
-  <a
-    :href="href"
-    target="_blank"
-    rel="noopener noreferrer"
+  <component
+    :is="etiqueta"
+    v-bind="atributos"
     class="w-fit my-2 p-1.5 rounded-md bg-[#C07B63] shadow-md
            transition-transform duration-200 active:scale-95 hover:scale-[1.03]"
   >
@@ -17,16 +19,24 @@
         {{ texto }}
       </span>
     </span>
-  </a>
+  </component>
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
+
 export default {
   name: 'BotonEnlace',
   props: {
+    // enlace externo; se ignora si viene `to`
     href: {
       type: String,
-      required: true,
+      default: '',
+    },
+    // ruta interna del sitio, p. ej. "/hospedaje"
+    to: {
+      type: String,
+      default: '',
     },
     texto: {
       type: String,
@@ -36,6 +46,22 @@ export default {
     icono: {
       type: [Object, Function],
       required: true,
+    },
+  },
+  computed: {
+    etiqueta() {
+      return this.to ? RouterLink : 'a'
+    },
+    atributos() {
+      if (this.to) {
+        return { to: this.to }
+      }
+
+      return {
+        href: this.href,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      }
     },
   },
 }
