@@ -1,8 +1,8 @@
 <template>
     <div class="flex justify-center gap-4">
         <div v-for="(item, key) in data" :key="item.id" class="text-center">
-            <h2 class="text-5xl font-serif">{{ item.value }}</h2>
-            <p class="font-ui uppercase tracking-[0.2em] text-xs">
+            <h2 class="text-3xl font-serif">{{ item.value }}</h2>
+            <p class="font-ui uppercase tracking-[0.2em] text-[10px]">
                 {{ item.label }}
             </p>
         </div>

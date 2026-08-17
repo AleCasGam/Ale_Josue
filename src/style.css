@@ -48,7 +48,7 @@
     que la pantalla y se pierde la parte de abajo. dvh sigue el alto real.
     La línea vh queda como respaldo para navegadores que no lo soporten.
   */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   min-height: 100dvh;
   scroll-snap-align: start;
   /* que un deslizón fuerte no se salte una sección entera */

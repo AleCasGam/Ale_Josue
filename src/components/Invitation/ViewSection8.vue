@@ -10,7 +10,7 @@
       <div class="flex-1 min-h-0 w-full bg-cover bg-center bg-no-repeat rounded-md shadow-md image-1" />
 
       <SeparadorCorazon />
-      <div class="relative text-xs w-full p-1 flex flex-col items-center gap-1 border border-primary rounded-md">
+      <div class="relative text-xs w-full p-3 flex flex-col items-center gap-1 border border-primary rounded-md">
         <p class="font-serif text-black text-center  leading-relaxed">
           {{ data.messages.texto5 }}
         </p>
