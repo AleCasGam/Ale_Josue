@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'flex flex-col items-center justify-center overflow-hidden h-dvh': !isOpen }">
+  <div :class="{ 'flex flex-col items-center justify-center overflow-hidden min-h-dvh': !isOpen }">
     <ClosedInvitation v-if="!isOpen" @open="isOpen = true" />
     <!--
       Sin max-height: el contenedor de scroll mide exactamente lo mismo que sus

@@ -70,8 +70,8 @@ export default {
 .invitacion-scroll {
   /* mismo criterio que .seccion: el contenedor y sus secciones tienen que
      medir exactamente igual o el snap queda corrido */
-  /* height: 100vh; */
-  height: 100dvh;
+  height: 100vh;
+  min-height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;
