@@ -1,6 +1,6 @@
 <template>
   <section class="p-4">
-    <div class="relative items-center w-full h-[90vh] p-4 flex flex-col gap-2 border border-primary rounded-md">
+    <div class="relative items-center w-full h-[90svh] p-4 flex flex-col gap-2 border border-primary rounded-md">
       <!-- corazón montado sobre la línea del marco: el fondo crema la corta -->
       <span class="absolute top-0 left-1/2 flex -translate-x-1/2 -translate-y-1/2 bg-background px-2">
         <HeartIcon class="w-4 h-4 text-primary" />
@@ -65,6 +65,6 @@ export default {
 }
 .image-3 {
   background-image: url('../../assets/images/pictures/select-12.webp');
-  background-position-y: top;
+  background-position-y: center;
 }
 </style>

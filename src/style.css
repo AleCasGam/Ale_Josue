@@ -43,13 +43,20 @@
 
 .seccion {
   /*
-    dvh en vez de vh: en Android, 100vh es la altura del viewport SIN la barra
-    de direcciones, así que mientras la barra está visible la sección mide más
-    que la pantalla y se pierde la parte de abajo. dvh sigue el alto real.
-    La línea vh queda como respaldo para navegadores que no lo soporten.
+    svh (small viewport height) = el alto disponible CON la barra de direcciones
+    visible, o sea el mínimo. Es la única de las cuatro unidades que NO cambia
+    de valor mientras se hace scroll:
+      vh  → en Android equivale a lvh, así que la sección no cabe y se corta
+      lvh → el máximo, mismo problema
+      dvh → sigue el alto actual, pero al aparecer/ocultarse la barra cambia a
+            media transición, el navegador recalcula los puntos de snap y da el
+            salto
+      svh → estable; siempre cabe. A cambio, con la barra oculta sobra una
+            franja abajo, que es preferible al salto.
+    La línea vh queda de respaldo para navegadores sin soporte.
   */
-  /* min-height: 100vh; */
-  min-height: 100dvh;
+  min-height: 100vh;
+  min-height: 100svh;
   scroll-snap-align: start;
   /* que un deslizón fuerte no se salte una sección entera */
   scroll-snap-stop: always;
@@ -57,6 +64,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  /* svh igual que el alto, y chico: este padding se suma a los h-[NNsvh] de
+     cada sección, y entre los dos es fácil pasarse de la pantalla */
+  padding-top: 2svh;
+  padding-bottom: 2svh;
 }

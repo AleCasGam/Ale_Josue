@@ -1,7 +1,7 @@
 <template>
-  <!-- 100dvh y no min-h-screen: con 100vh el body queda más alto que la
-       pantalla en Android y aparece un segundo scroll que pelea con el snap -->
-  <div class="general-background w-full min-h-dvh">
+  <!-- svh y no screen/dvh: con 100vh el body queda más alto que la pantalla
+       en Android y aparece un segundo scroll que pelea con el snap -->
+  <div class="general-background w-full min-h-svh">
     <!--
       keep-alive conserva la invitación al ir y volver de hospedaje: el sobre
       no se vuelve a cerrar y la música sigue sonando.

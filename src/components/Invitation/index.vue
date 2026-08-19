@@ -68,10 +68,11 @@ export default {
 <style scoped>
 /* ── Contenedor principal con scroll-snap ── */
 .invitacion-scroll {
-  /* mismo criterio que .seccion: el contenedor y sus secciones tienen que
-     medir exactamente igual o el snap queda corrido */
+  /* Una sola altura, la misma unidad que .seccion. Mezclar min-height con
+     height desalinea el snap: min-height gana, así que el contenedor se queda
+     en el alto máximo mientras las secciones miden otra cosa. */
   height: 100vh;
-  min-height: 100dvh;
+  height: 100svh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   -webkit-overflow-scrolling: touch;

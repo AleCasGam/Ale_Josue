@@ -1,7 +1,7 @@
 <template>
   <section class="px-4 gap-4">
-    <div class="w-full h-[35vh] bg-transparent border border-primary rounded-md">
-      <img class="p-4 w-full h-full object-top object-cover" src="../../assets/images/pictures/select-1.webp" alt="Alejandra y Josué" />
+    <div class="w-full h-[35svh] p-4 border border-primary rounded-md">
+      <div class="flex-1 min-h-0 h-full w-full bg-cover bg-center bg-no-repeat rounded-md shadow-md image-1" alt="Alejandra y Josué" />
     </div>
 
     <!-- Antes era la imagen nos-casamos.webp; ahora es texto para poder
@@ -49,4 +49,8 @@ export default {
 </script>
 
 <style scoped>
+.image-1 {
+  background-image: url('../../assets/images/pictures/select-1.webp');
+  background-position-y: top;
+}
 </style>
