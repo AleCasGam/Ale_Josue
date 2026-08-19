@@ -1,7 +1,6 @@
 <template>
-  <!-- svh y no screen/dvh: con 100vh el body queda más alto que la pantalla
-       en Android y aparece un segundo scroll que pelea con el snap -->
-  <div class="general-background w-full min-h-svh">
+  <!-- h-full continúa la cadena de alturas que arranca en html/body -->
+  <div class="general-background w-full h-full">
     <!--
       keep-alive conserva la invitación al ir y volver de hospedaje: el sobre
       no se vuelve a cerrar y la música sigue sonando.

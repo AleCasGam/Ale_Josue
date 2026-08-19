@@ -1,5 +1,6 @@
 <template>
-  <div class="min-h-screen w-full p-4 flex flex-col items-center gap-6">
+  <!-- overflow-y-auto: el documento está bloqueado, el scroll de la lista vive aquí -->
+  <div class="h-full w-full overflow-y-auto p-4 flex flex-col items-center gap-6">
     <header class="w-full flex flex-col items-center gap-2 pt-4">
       <h1 class="font-cormorant text-primary text-4xl font-bold text-center">
         ¿Dónde hospedarme?

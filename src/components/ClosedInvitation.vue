@@ -1,5 +1,5 @@
 <template>
-  <div class="closed-invitation flex flex-col items-center justify-center w-full h-screen p-2">
+  <div class="closed-invitation flex flex-col items-center justify-center w-full h-full p-2">
     <div class="envelope-wrapper" @click="openEnvelope">
       <!-- Sobre cerrado: se anima al hacer clic -->
       <img

@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/*
+  El documento no scrollea: el scroll vive dentro de .invitacion-scroll.
+  Esto es lo que evita que Chrome de Android esconda la barra de direcciones,
+  y por lo tanto que el alto del viewport cambie a media transición. Sin ese
+  cambio no hay ni salto al regresar ni franja sobrante abajo.
+  Cada vista se encarga de su propio scroll (ver Hospedaje.vue).
+*/
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -43,20 +58,12 @@
 
 .seccion {
   /*
-    svh (small viewport height) = el alto disponible CON la barra de direcciones
-    visible, o sea el mínimo. Es la única de las cuatro unidades que NO cambia
-    de valor mientras se hace scroll:
-      vh  → en Android equivale a lvh, así que la sección no cabe y se corta
-      lvh → el máximo, mismo problema
-      dvh → sigue el alto actual, pero al aparecer/ocultarse la barra cambia a
-            media transición, el navegador recalcula los puntos de snap y da el
-            salto
-      svh → estable; siempre cabe. A cambio, con la barra oculta sobra una
-            franja abajo, que es preferible al salto.
-    La línea vh queda de respaldo para navegadores sin soporte.
+    100% del contenedor de scroll, que a su vez mide justo la pantalla. Al no
+    poder ocultarse la barra del navegador, ese alto ya no cambia nunca.
+    La línea svh queda de respaldo por si la cadena de alturas se rompe.
   */
-  min-height: 100vh;
   min-height: 100svh;
+  min-height: 100%;
   scroll-snap-align: start;
   /* que un deslizón fuerte no se salte una sección entera */
   scroll-snap-stop: always;
@@ -64,8 +71,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* svh igual que el alto, y chico: este padding se suma a los h-[NNsvh] de
-     cada sección, y entre los dos es fácil pasarse de la pantalla */
   padding-top: 2svh;
   padding-bottom: 2svh;
 }
