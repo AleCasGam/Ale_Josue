@@ -12,11 +12,16 @@ import sobreAbierto from './images/sobre-abierto-sombra.webp'
 import select1 from './images/pictures/select-1.webp'
 import santuarioEncino from './images/pictures/santuario-encino.webp'
 import casaFlorencia from './images/pictures/casa-florencia.webp'
-import itinerario from './images/itinerario.webp'
+import itinerario1 from './images/itinerario/itinerario_1_ceremonia.webp'
+import itinerario2 from './images/itinerario/itinerario_2_recepcion.webp'
+import itinerario3 from './images/itinerario/itinerario_3_banquete.webp'
+import itinerario4 from './images/itinerario/itinerario_4_baile.webp'
+import itinerario5 from './images/itinerario/itinerario_5_fin.webp'
 import select2 from './images/pictures/select-2.webp'
 import select3 from './images/pictures/select-3.webp'
 import selectMano from './images/pictures/select-mano.webp'
-import codigoVestimenta from './images/codigo-vestimenta-3.webp'
+import vestidoBlanco from './images/vestimenta/vestimenta_blanco.webp'
+import vestidoTerracota from './images/vestimenta/vestimenta_terracota.webp'
 import select11 from './images/pictures/select-11.webp'
 import select12 from './images/pictures/select-12.webp'
 import select21 from './images/pictures/select-21.webp'
@@ -28,11 +33,16 @@ export default [
   select1, // sección 2, foto
   santuarioEncino, // sección 3, ceremonia
   casaFlorencia, // sección 4, recepción
-  itinerario, // sección 5
+  itinerario1, // sección 5, itinerario
+  itinerario2,
+  itinerario3,
+  itinerario4,
+  itinerario5,
   select2, // sección 6, galería
   select3, // sección 6, galería
   selectMano, // sección 6, galería
-  codigoVestimenta, // sección 7
+  vestidoBlanco, // sección 7, código de vestimenta
+  vestidoTerracota,
   select11, // sección 8, mesa de regalos
   select12, // sección 8, mesa de regalos
   select21, // sección 9, agradecimiento

@@ -23,10 +23,12 @@
     <ViewSection6 class="seccion" />
     <!-- seccion 7: Codigo de vestimenta -->
     <ViewSection7 class="seccion" />
-    <!-- seccion 7: Mesa de regalos -->
+    <!-- seccion 8: Mesa de regalos -->
     <ViewSection8 class="seccion" />
+    <!-- seccion 9: Gracias -->
     <ViewSection9 class="seccion" />
-
+    <!-- seccion 10: hospedaje -->
+ <ViewSection10 class="seccion" />
   </div>
 </template>
 
@@ -40,8 +42,10 @@ import ViewSection6 from './ViewSection6.vue'
 import ViewSection7 from './ViewSection7.vue'
 import ViewSection8 from './ViewSection8.vue'
 import ViewSection9 from './ViewSection9.vue'
+import ViewSection10 from './ViewSection10.vue'
 import TextBox from '../ui/TextBox.vue'
 import MusicPlayer from '../MusicPlayer.vue'
+
 
 export default {
   name: 'Invitation',
@@ -57,6 +61,7 @@ export default {
     ViewSection7,
     ViewSection8,
     ViewSection9,
+    ViewSection10,
   },
   data() {
     return {

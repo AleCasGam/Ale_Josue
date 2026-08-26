@@ -26,7 +26,8 @@ export default {
     texto4: "¡Te esperamos!",
     texto5: "Lo más importante para nosotros es compartir este día tan especial con ustedes y contar con su presencia.",
     texto6: "Si desean obsequiarnos algo, hemos preparado una mesa de regalos con algunas cosas para comenzar esta nueva etapa.",
-    texto7: "Gracias por acompañarnos, por su cariño y por ser parte de este día tan especial."
+    texto7: "Gracias por acompañarnos, por su cariño y por ser parte de este día tan especial.",
+    texto8: "Para que disfrutes de nuestra celebración sin preocupaciones, hemos preparado algunas opciones de hospedaje para tu comodidad"
   },
 
   colors: [

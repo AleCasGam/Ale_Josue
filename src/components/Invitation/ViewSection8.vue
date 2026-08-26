@@ -65,6 +65,5 @@ export default {
 }
 .image-3 {
   background-image: url('../../assets/images/pictures/select-12.webp');
-  background-position-y: center;
 }
 </style>

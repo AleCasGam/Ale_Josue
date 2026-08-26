@@ -1,29 +1,24 @@
 <template>
   <section class="p-4">
-    <div class="relative items-center justify-around w-full h-[75svh] p-4 flex flex-col gap-2 border border-primary rounded-md">
+    <div
+      class="relative items-center justify-around w-full h-[75svh] p-4 flex flex-col gap-2 border border-primary rounded-md">
       <!-- corazón montado sobre la línea del marco: el fondo crema la corta -->
       <span class="absolute top-0 left-1/2 flex -translate-x-1/2 -translate-y-1/2 bg-background px-2">
         <HeartIcon class="w-4 h-4 text-primary" />
       </span>
 
-      <!--
-        Las fotos son verticales: al angostarlas el contenedor se acerca a su
-        proporción y bg-cover recorta menos. self-start / self-end las manda a
-        cada extremo, ganándole al items-center del padre.
-      -->
-        <div class="relative grid grid-cols-2 min-h-[50%] w-full gap-2">
-          <div class="h-full col-span-1 bg-cover bg-center bg-no-repeat rounded-md shadow-md image-1" />
-          <div class="h-full col-span-1 bg-cover bg-center bg-no-repeat rounded-md shadow-md image-2" />
-        </div>
 
       <div class="relative my-4 text-lg w-full p-5 flex flex-col items-center gap-3 ">
         <p class="font-serif text-black text-center leading-relaxed">
-          {{ data.messages.texto7 }}
+          {{ data.messages.texto8 }}
         </p>
         <SeparadorCorazon />
       </div>
 
+      <BotonEnlace class="mt-[8%]" to="/hospedaje" texto="Dónde Hospedarme" :icono="BuildingOffice2Icon" />
+
     </div>
+
   </section>
 </template>
 
@@ -31,12 +26,14 @@
 import { HeartIcon, BuildingOffice2Icon } from '@heroicons/vue/24/solid'
 import SeparadorCorazon from '../ui/SeparadorCorazon.vue'
 import weddingData from '../../data/wedding-data.js'
+import BotonEnlace from '../ui/BotonEnlace.vue'
 
 export default {
   name: 'ViewSection9',
   components: {
     HeartIcon,
     SeparadorCorazon,
+    BotonEnlace,
   },
   data() {
     return {
@@ -52,6 +49,7 @@ export default {
   background-image: url('../../assets/images/pictures/select-21.webp');
   background-position-y: top;
 }
+
 .image-2 {
   background-image: url('../../assets/images/pictures/select-22.webp');
 }
