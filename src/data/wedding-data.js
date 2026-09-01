@@ -29,6 +29,17 @@ export default {
     texto8: "Para que disfrutes de nuestra celebración sin preocupaciones, hemos preparado algunas opciones de hospedaje para tu comodidad"
   },
 
+  // Pie de la última sección: el crédito de quien diseña las invitaciones.
+  credito: {
+    texto: "¿Te gustó esta invitación? Podemos diseñar la tuya",
+    // Número para el link de wa.me: lada de país + número, SOLO dígitos, sin
+    // espacios, guiones ni "+". En México son 52 más los 10 dígitos, o sea
+    // "523312345678". Mientras esté vacío el pie no se renderiza.
+    whatsapp: "524671004699",
+    // Con lo que viene escrito el chat al abrirse.
+    mensaje: "Hola, vi la invitación de Alejandra y Josué y me gustaría una así",
+  },
+
   colors: [
     "#C56F52",
     "#556B2F",

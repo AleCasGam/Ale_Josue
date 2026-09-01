@@ -19,11 +19,30 @@
 
     </div>
 
+    <!--
+      Pie de la última sección: el crédito de quien diseñó la invitación. Va
+      fuera del marco, en chico, para que se lea como firma y no como contenido
+      de la boda. Solo aparece si hay número cargado en wedding-data.js.
+    -->
+    <footer v-if="enlaceWhatsapp" class="mt-4 w-full flex justify-center">
+      <a
+        :href="enlaceWhatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 font-ui text-xs tracking-wide text-primary
+               underline decoration-primary/40 underline-offset-4
+               transition-opacity active:opacity-60"
+      >
+        <ChatBubbleOvalLeftEllipsisIcon class="w-4 h-4 shrink-0" />
+        {{ data.credito.texto }}
+      </a>
+    </footer>
+
   </section>
 </template>
 
 <script>
-import { HeartIcon, BuildingOffice2Icon } from '@heroicons/vue/24/solid'
+import { HeartIcon, BuildingOffice2Icon, ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/vue/24/solid'
 import SeparadorCorazon from '../ui/SeparadorCorazon.vue'
 import weddingData from '../../data/wedding-data.js'
 import BotonEnlace from '../ui/BotonEnlace.vue'
@@ -34,13 +53,23 @@ export default {
     HeartIcon,
     SeparadorCorazon,
     BotonEnlace,
+    ChatBubbleOvalLeftEllipsisIcon,
   },
   data() {
     return {
       data: weddingData,
       BuildingOffice2Icon, // se pasa como prop al BotonEnlace
     };
-  }
+  },
+  computed: {
+    // wa.me abre el chat directo, sin depender de que el número esté agendado.
+    enlaceWhatsapp() {
+      const { whatsapp, mensaje } = this.data.credito
+      if (!whatsapp) return ''
+
+      return `https://wa.me/${whatsapp}?text=${encodeURIComponent(mensaje)}`
+    },
+  },
 };
 </script>
 

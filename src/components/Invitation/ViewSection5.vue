@@ -48,7 +48,8 @@
 
           <!-- px además de py: el fondo tiene que tapar la línea a lo ancho -->
           <span class="row-start-1 col-start-2 flex items-center justify-center bg-background px-2 py-1.5">
-            <HeartIcon class="w-4 h-4 text-primary" />
+            <!-- <HeartIcon class="w-4 h-4 text-primary" /> -->
+             <div class="w-2 h-2 bg-primary rounded-full"/>
           </span>
 
           <img
