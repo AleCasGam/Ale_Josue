@@ -40,10 +40,46 @@
           {{ lugar.nombre }}
         </h2>
 
-        <p class="font-serif text-black text-lg">
+        <!-- descripción: opcional, solo la traen los alojamientos particulares -->
+        <p
+          v-if="lugar.description"
+          class="font-serif text-secondary text-center text-sm leading-relaxed"
+        >
+          {{ lugar.description }}
+        </p>
+
+        <!-- teléfono: en celular el tel: abre el marcador directo -->
+        <a
+          v-if="lugar.phone"
+          :href="`tel:${lugar.phone}`"
+          class="flex items-center gap-2 font-serif text-black text-base"
+        >
+          <PhoneIcon class="w-4 h-4 text-primary shrink-0" />
+          {{ formatearTelefono(lugar.phone) }}
+        </a>
+
+        <!-- precio: varias tarifas -> una línea por tipo de habitación -->
+        <ul
+          v-if="esListaDePrecios(lugar.price)"
+          class="w-full max-w-[16rem] flex flex-col gap-1 list-none"
+        >
+          <li
+            v-for="tarifa in lugar.price"
+            :key="tarifa.text"
+            class="flex items-baseline justify-between gap-3 font-serif"
+          >
+            <span class="text-secondary text-sm">{{ tarifa.text }}</span>
+            <span class="text-black text-lg">{{ formatearPrecio(tarifa.price) }}</span>
+          </li>
+          <li class="font-serif text-secondary text-xs text-center pt-1">por noche</li>
+        </ul>
+
+        <!-- precio: uno solo -->
+        <p v-else-if="lugar.price != null" class="font-serif text-black text-lg">
           {{ formatearPrecio(lugar.price) }}
           <span class="text-secondary text-sm">por noche</span>
         </p>
+        <!-- price null: no se muestra nada -->
 
         <BotonEnlace
           v-if="lugar.link_maps"
@@ -66,7 +102,7 @@
 
 <script>
 import { RouterLink } from 'vue-router'
-import { HeartIcon, MapPinIcon } from '@heroicons/vue/24/solid'
+import { HeartIcon, MapPinIcon, PhoneIcon } from '@heroicons/vue/24/solid'
 import { BuildingOffice2Icon, ArrowLeftIcon } from '@heroicons/vue/24/outline'
 import SeparadorCorazon from '../components/ui/SeparadorCorazon.vue'
 import BotonEnlace from '../components/ui/BotonEnlace.vue'
@@ -77,6 +113,7 @@ export default {
   components: {
     RouterLink,
     HeartIcon,
+    PhoneIcon,
     BuildingOffice2Icon,
     ArrowLeftIcon,
     SeparadorCorazon,
@@ -89,12 +126,21 @@ export default {
     }
   },
   methods: {
+    // el hotel puede tener varias tarifas: [{ text, price }, ...]
+    esListaDePrecios(precio) {
+      return Array.isArray(precio) && precio.length > 0
+    },
     formatearPrecio(precio) {
       return new Intl.NumberFormat('es-MX', {
         style: 'currency',
         currency: 'MXN',
         maximumFractionDigits: 0,
       }).format(precio)
+    },
+    // +523441011427 -> +52 344 101 1427; si no calza el patrón se deja igual
+    formatearTelefono(telefono) {
+      const partes = telefono.match(/^\+52(\d{3})(\d{3})(\d{4})$/)
+      return partes ? `+52 ${partes[1]} ${partes[2]} ${partes[3]}` : telefono
     },
   },
 }

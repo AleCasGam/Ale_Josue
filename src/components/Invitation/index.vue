@@ -28,7 +28,7 @@
     <!-- seccion 9: Gracias -->
     <ViewSection9 class="seccion" />
     <!-- seccion 10: hospedaje -->
- <ViewSection10 class="seccion" />
+    <ViewSection10 class="seccion" />
   </div>
 </template>
 

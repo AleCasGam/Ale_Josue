@@ -16,8 +16,7 @@ export default {
     maps: ""
   },
 
-  // PENDIENTE: pegar aquí el enlace de la mesa de regalos (Liverpool, Amazon…)
-  mesaRegalos: "",
+  mesaRegalos: "https://www.amazon.com.mx/wedding/guest-view/24L23YNR7SZM3",
 
   messages: {
     texto1: "Con el corazón lleno de alegría tenemos el honor de invitarte a celebrar el día en que uniremos nuestras vidas en matrimonio.",
