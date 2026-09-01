@@ -1,9 +1,12 @@
 <template>
   <div>
     <!--
-      preload="none": la canción pesa 3.2 MB, más que todas las imágenes del
+      preload="none": la canción pesa 1.6 MB, más que todas las imágenes del
       sitio juntas. La descarga arranca hasta que se llama play(), o sea al
       abrir la invitación, no mientras el invitado ve el sobre cerrado.
+
+      loop: la canción dura 3:14 y la visita puede ser más larga, así que se
+      repite sola en vez de dejar la invitación en silencio.
     -->
     <audio
       ref="audio"
@@ -31,7 +34,11 @@
 
 <script>
 import { PlayIcon, PauseIcon } from '@heroicons/vue/24/solid'
-import cancion from '../assets/music/Luis Miguel - Entrega Total.mp3'
+// El .m4a (AAC) sale de convertir el Usted.mp3 original, que pesaba 3.1 MB.
+// AAC rinde bastante más que MP3 al mismo bitrate y lo entienden todos los
+// navegadores, Safari incluido. Si se cambia de canción, el comando es:
+//   ffmpeg -i cancion.mp3 -c:a aac -b:a 64k -ar 44100 cancion.m4a
+import cancion from '../assets/music/Usted.m4a'
 
 export default {
   name: 'MusicPlayer',
