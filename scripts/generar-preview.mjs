@@ -6,8 +6,12 @@
 //     Vite le pone hash a todo lo de src/assets/, así que la ruta cambiaría en
 //     cada build. En public/ el archivo se copia tal cual a la raíz del sitio.
 //   - WhatsApp no renderiza WebP de forma confiable en la previsualización:
-//     tiene que ser JPG o PNG, y pesar poco (por eso 1200x630 a calidad 86,
-//     ~90 KB).
+//     tiene que ser JPG o PNG, y pesar poco (por eso 1200x630 a calidad 88,
+//     ~120 KB).
+//
+// Ojo con la regla de CLAUDE.md de que en src/assets/images/ solo viven fotos
+// que usa algún componente: select-preview.webp es la excepción, la usa este
+// script y nada más. No la borres pensando que sobra.
 //
 // Uso: npm run generar-preview
 
@@ -15,7 +19,7 @@ import sharp from 'sharp'
 import { fileURLToPath } from 'node:url'
 import { stat } from 'node:fs/promises'
 
-const FOTO = fileURLToPath(new URL('../src/assets/images/pictures/select-1.webp', import.meta.url))
+const FOTO = fileURLToPath(new URL('../src/assets/images/pictures/select-preview.webp', import.meta.url))
 const DESTINO = fileURLToPath(new URL('../public/preview.jpg', import.meta.url))
 
 // 1200x630 es la proporción 1.91:1 que piden Open Graph y WhatsApp para
@@ -23,29 +27,37 @@ const DESTINO = fileURLToPath(new URL('../public/preview.jpg', import.meta.url))
 const ANCHO = 1200
 const ALTO = 630
 
-// La foto es vertical: recortarla a 1.91:1 les cortaría la cara, así que se
-// deja completa a la izquierda y el espacio que sobra se llena con el crema
-// del sitio más los nombres y la fecha.
-const foto = await sharp(FOTO).resize({ height: ALTO }).toBuffer()
-const { width: anchoFoto } = await sharp(foto).metadata()
+// La foto original es casi cuadrada (687x663), así que para llegar a 1.91:1 se
+// recorta una banda horizontal. El `top: 30` está elegido a mano: es lo más
+// arriba que se puede cortar sin dejar fuera el pelo de él, y deja dentro las
+// dos caras, el cactus de la izquierda y el cerro del fondo.
+const RECORTE = { left: 0, top: 30, width: 687, height: 361 }
 
-const centroTexto = anchoFoto + (ANCHO - anchoFoto) / 2
+// El texto va encima de la foto, no a un lado, para que la imagen sea lo que
+// domina la miniatura. El degradado oscuro del pie es lo único que lo hace
+// legible sobre el vestido claro.
+const capaTexto = Buffer.from(`<svg width="${ANCHO}" height="${ALTO}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="velo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0.45" stop-color="#2A1A12" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#2A1A12" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2A1A12" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#velo)"/>
+  <text x="600" y="516" font-family="Georgia, serif" font-size="58" fill="#FFF8F0" text-anchor="middle">Alejandra &amp; Josué</text>
+  <line x1="510" y1="546" x2="690" y2="546" stroke="#FFF8F0" stroke-width="1" opacity="0.6"/>
+  <text x="600" y="590" font-family="Georgia, serif" font-size="27" fill="#FFF8F0" text-anchor="middle" letter-spacing="6">03 . 10 . 2026</text>
+</svg>`)
 
 // Georgia como fuente: las del sitio (Cormorant, Great Vibes) vienen de Google
 // Fonts por <link> y no están instaladas en el sistema, que es de donde las
 // tomaría sharp al rasterizar este SVG.
-const lienzo = Buffer.from(`<svg width="${ANCHO}" height="${ALTO}" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#F7F2EB"/>
-  <text x="${centroTexto}" y="205" font-family="Georgia, serif" font-size="32" fill="#8A6A52" text-anchor="middle" letter-spacing="9">NOS CASAMOS</text>
-  <text x="${centroTexto}" y="315" font-family="Georgia, serif" font-size="64" fill="#C56F52" text-anchor="middle">Alejandra</text>
-  <text x="${centroTexto}" y="390" font-family="Georgia, serif" font-size="52" fill="#C56F52" text-anchor="middle">&amp; Josué</text>
-  <line x1="${centroTexto - 90}" y1="435" x2="${centroTexto + 90}" y2="435" stroke="#C56F52" stroke-width="1" opacity="0.5"/>
-  <text x="${centroTexto}" y="490" font-family="Georgia, serif" font-size="32" fill="#556B2F" text-anchor="middle" letter-spacing="5">03 . 10 . 2026</text>
-</svg>`)
-
-await sharp(lienzo)
-  .composite([{ input: foto, left: 0, top: 0 }])
-  .jpeg({ quality: 86 })
+await sharp(FOTO)
+  .extract(RECORTE)
+  .resize(ANCHO, ALTO)
+  .composite([{ input: capaTexto, left: 0, top: 0 }])
+  .jpeg({ quality: 88 })
   .toFile(DESTINO)
 
 const { size } = await stat(DESTINO)
