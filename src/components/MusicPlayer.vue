@@ -38,7 +38,7 @@ import { PlayIcon, PauseIcon } from '@heroicons/vue/24/solid'
 // AAC rinde bastante más que MP3 al mismo bitrate y lo entienden todos los
 // navegadores, Safari incluido. Si se cambia de canción, el comando es:
 //   ffmpeg -i cancion.mp3 -c:a aac -b:a 64k -ar 44100 cancion.m4a
-import cancion from '../assets/music/Usted.m4a'
+import cancion from '../assets/music/Usted.mp3'
 
 export default {
   name: 'MusicPlayer',
