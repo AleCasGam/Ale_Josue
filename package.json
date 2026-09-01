@@ -8,7 +8,8 @@
     "prebuild": "npm run optimizar-imagenes",
     "build": "vite build",
     "preview": "vite preview",
-    "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs"
+    "optimizar-imagenes": "node scripts/optimizar-imagenes.mjs",
+    "generar-preview": "node scripts/generar-preview.mjs"
   },
   "dependencies": {
     "@heroicons/vue": "^2.2.0",

@@ -85,8 +85,8 @@ export default {
       itinerario: [
         { hora: '4:00 pm', text: 'Ceremonia religiosa', icono: iconoCeremonia },
         { hora: '6:00 pm', text: 'Recepción', icono: iconoRecepcion },
-        { hora: '8:00 pm', text: 'Banquete', icono: iconoBanquete },
-        { hora: '9:00 pm', text: 'Baile', icono: iconoBaile },
+        { hora: '7:30 pm', text: 'Banquete', icono: iconoBanquete },
+        { hora: '9:30 pm', text: 'Baile', icono: iconoBaile },
         { hora: '2:00 am', text: 'Fin del evento', icono: iconoFin },
       ],
     };
