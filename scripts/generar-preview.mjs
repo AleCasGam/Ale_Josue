@@ -27,11 +27,11 @@ const DESTINO = fileURLToPath(new URL('../public/preview.jpg', import.meta.url))
 const ANCHO = 1200
 const ALTO = 630
 
-// La foto original es casi cuadrada (687x663), así que para llegar a 1.91:1 se
-// recorta una banda horizontal. El `top: 30` está elegido a mano: es lo más
-// arriba que se puede cortar sin dejar fuera el pelo de él, y deja dentro las
-// dos caras, el cactus de la izquierda y el cerro del fondo.
-const RECORTE = { left: 0, top: 30, width: 687, height: 361 }
+// La foto original (1047x716) es más ancha que alta pero no llega a 1.91:1, así
+// que se recorta una banda horizontal. El `top: 60` está elegido a mano: deja
+// aire arriba del pelo de él y baja el encuadre lo suficiente para que las caras
+// queden en el tercio superior, lejos del texto del pie.
+const RECORTE = { left: 0, top: 60, width: 1047, height: 550 }
 
 // El texto va encima de la foto, no a un lado, para que la imagen sea lo que
 // domina la miniatura. El degradado oscuro del pie es lo único que lo hace
